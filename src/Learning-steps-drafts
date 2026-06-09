@@ -1,0 +1,125 @@
+//map in java//
+/*function App() {
+  // 1. الداتا الأصلية
+  const serverd = [
+    { id: "1", name: "cake1", description: "fluffy", price: "50" },
+    { id: "2", name: "cake2", description: "chocolate", price: "60" },
+    { id: "3", name: "cake3", description: "vanilla", price: "55" }
+  ];
+
+  // 2. تصفية الداتا وتحويلها
+  const claend = serverd.map(dessert => {
+    return {
+      content: `${dessert.name} - ${dessert.description}`,
+      price: dessert.price 
+    };
+  });
+
+  // 3. عرض الداتا على الشاشة (هذا يلي بيخلي الشاشة ما تضل بيضا!)
+  return (
+    <div >
+      <h1>dissert list🍰</h1>
+      <ul>
+        {claend.map((item, index) => (
+          <li key={index} >
+          {item.content}| السعر: {item.price}$
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default App;*/
+//map in react//
+/*function App() {
+  // 1. المصفوفة الأصلية (قائمة الحلويات الجاية من السيرفر مثلاً)
+  const desserts = [
+    { id: "d1", title: "Chocolate Cake", price: "15$" },
+    { id: "d2", title: "Strawberry Cheesecake", price: "18$" },
+    { id: "d3", title: "Vanilla Ice Cream", price: "10$" }
+  ];
+
+  // 2. تحويل المصفوفة إلى عناصر ريأكت (JSX) باستخدام map
+  const listItems = desserts.map(dessert => {
+    return (
+      //أنت هون عم تعطي الـ id كخاصية مخفية لـ React (خلف الكواليس) لحتى يرتّب العناصر بذكاء وسرعة. الـ key
+      <li key={dessert.id} >
+       {dessert.title} - <span >{dessert.price}</span>
+      </li>
+    );
+  });
+
+  return (
+    <div >
+      <h2>🍰 Menu </h2>
+            <ul >
+        {listItems}
+      </ul>
+    </div>
+  );
+}
+
+export default App;*/
+//filter and sort in react//
+/*
+//filter and sort in react//
+/*
+import D1 from "./D1";
+
+function App() {
+  // مصفوفة حلويات تجريبية فيها سعرات حرارية مختلفة (بعضها أكبر من 500 وبعضها أصغر)
+  const dessertsData = [
+    { id: "1", name: "Chocolate Cake", calories: 400 },
+    { id: "2", name: "Ice Cream", calories: 600 }, // رح ينحذف بالفلترة
+    { id: "3", name: "Strawberry Cheesecake", calories: 480 },
+    { id: "4", name: "Apple Pie", calories: 300 },
+  ];
+
+  return (
+    <div style={{ padding: '20px' }}>
+      <h1>Coursera Lab Test</h1>
+      <D1 data={dessertsData} />
+    </div>
+  );
+}
+
+export default App;*/
+/*
+import React, { useState } from 'react';
+import Todo from './Todo';
+
+function App() {
+  // 1. الداتا بالـ State
+  const [todos, setTodos] = useState([
+    { id: 'todo-1', title: ' study', createdAt: '12:00 AM' },
+    { id: 'todo-2', title: 'lab ', createdAt: '12:05 AM' }
+  ]);
+
+  // 2. دالة العكس
+  const reverseOrder = () => {
+    setTodos([...todos].reverse());
+  };
+
+  return (
+    <div>
+      <h2>📝keys</h2>
+      
+      <button onClick={reverseOrder}>
+        🔁revers
+      </button>
+
+      <ul>
+        {todos.map((todo, index) => (
+          <Todo 
+            key={index} 
+            title={todo.title} 
+            createdAt={todo.createdAt} 
+          />
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default App;*/
